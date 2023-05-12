@@ -11,9 +11,9 @@ import {
   Space,
 } from 'antd';
 import CustomModal from './CustomModal';
-import { MdOutlineMoveToInbox, MdOutlineOutbox } from 'react-icons/md';
-import { BsInboxes, BsPerson } from 'react-icons/bs';
-import { IoScaleOutline, IoReceiptOutline } from 'react-icons/Io5';
+import { MdOutlineMoveToInbox, MdOutlineOutbox, MdScale } from 'react-icons/md';
+import { BsInboxes, BsPerson, BsReceipt } from 'react-icons/bs';
+// import { IoScaleOutline, IoReceiptOutline } from 'react-icons/Io5';
 import { useState } from 'react';
 import { useCreateItemsMutation } from '@/store/api/productsApi';
 import { errorNotification } from '../notifications/ErrorNotification';
@@ -118,7 +118,7 @@ const AddItemModal = (props: Props) => {
           <Input prefix={<BsInboxes />} min={0} type="number" required />
         </Form.Item>
         <Form.Item name="kilo" label="Kilos" required>
-          <Input prefix={<IoScaleOutline />} min={0} type="number" required />
+          <Input prefix={<MdScale />} min={0} type="number" required />
         </Form.Item>
 
         <Form.Item name="customer" label="Customer name" required>
@@ -126,7 +126,7 @@ const AddItemModal = (props: Props) => {
         </Form.Item>
 
         <Form.Item name="recieptNumber" label="Receipt #" required>
-          <Input prefix={<IoReceiptOutline />} min={0} type="number" required />
+          <Input prefix={<BsReceipt />} min={0} type="number" required />
         </Form.Item>
 
         <Row justify={'end'} gutter={[10, 10]}>
